@@ -20,8 +20,8 @@ import javax.xml.ws.Holder;
 
 public class Exiftool {
 	
-	static String sid = "RzyXNl5mVx7tZMsmus6ilIV7TG9cGFBZ6vYv59xlwhaLmPBfjpu4rTb3NJnw1411999202490103";
-	static String pid = "TGPR-9b18459d-3a6b-004f-b6aa-4fba2b9e1d3e";
+	static String sid = "";
+	static String pid = "";
 	
 	public static void main(String[] args) throws IOException, MetadataParseFault, ObjectNotFoundFault, IoFault, AuthFault, ProtocolNotImplementedFault {
 		// TODO Auto-generated method stub
@@ -29,7 +29,7 @@ public class Exiftool {
 //		SesameClient sc = new SesameClient("http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-nonpublic");
 //		sc.sparql("PREFIX ore:<http://www.openarchives.org/ore/terms/> PREFIX tg:<http://textgrid.info/relation-ns#> SELECT  ?URI WHERE {}")
 		
-		FileInputStream fis = new FileInputStream("/home/mathias/devel/prescaler/urilist.txt");
+		FileInputStream fis = new FileInputStream("urilist.txt");
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 		
 		TGCrudService tgcrud = TGCrudClientUtilities.getTgcrud("https://textgridlab.org/1.0/tgcrud/TGCrudService");
